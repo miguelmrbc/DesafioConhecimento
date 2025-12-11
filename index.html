@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Interativo - Curiosidades do Mundo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    Pontuação: <span id="score">0</span>
+  </header>
+
+  <div id="quiz-container">
+    <h2>Quiz Interativo - Cultura POP</h2>
+    <input type="text" id="playerName" placeholder="Digite seu nome">
+    <br><br>
+    <label for="level">Escolha o nível:</label>
+    <select id="level">
+      <option value="facil">Fácil</option>
+      <option value="medio">Médio</option>
+      <option value="dificil">Difícil</option>
+    </select>
+    <br><br>
+    <button onclick="startGame()">Iniciar</button>
+
+    <div id="question-area" style="display:none;">
+      <p id="timer">Tempo restante: 300s</p>
+      <h3 id="question"></h3>
+      <div id="answers"></div>
+      <p id="feedback"></p>
+    </div>
+
+    <div id="end-game" style="display:none;">
+      <h3 id="final-score"></h3>
+      <button onclick="restartGame()">Recomeçar</button>
+    </div>
+  </div>
+
+  <!-- Sons -->
+  <audio id="correctSound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+  <audio id="wrongSound" src="https://www.soundjay.com/button/beep-10.wav"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
